@@ -84,7 +84,7 @@ window.addEventListener('DOMContentLoaded', () => {
                   return;
               } else {
                   //const str = item.textContent.slice(0, 71) + '...';
-                  const str = `${item.textContent.slice(0, 71)}...`;
+                  const str = `${item.textContent.slice(0, 70)}...`;
                   item.textContent = str;
               }
           });
