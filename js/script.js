@@ -100,10 +100,18 @@ window.addEventListener('DOMContentLoaded', () => {
         removeBtn.forEach(function(btn) {
             btn.addEventListener('click', () => {
                 btn.parentElement.remove();
+                let rm = document.querySelector('.goods__item-remove');
+                if(rm) {
+                    return;
+                } else {
+                    let space = document.querySelector('.cart__wrapper');
+                    space.innerHTML = '<div class="empty">Ваша корзина пока пуста</div>';
+                }
                 calcGoods(0);
                 calcTotal();
             });
         });
     }
-
 });
+
+// document.querySelectorAll('.cart__wrapper').textContent("корзина пуста");
